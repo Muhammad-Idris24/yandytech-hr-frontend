@@ -7,6 +7,7 @@ import EmployeesPage from './features/employees/pages/EmployeesPage'
 import OrganizationPage from './features/organization/pages/OrganizationPage'
 import AttendancePage from './features/attendance/pages/AttendancePage'
 import LeavePage from './features/leave/pages/LeavePage'
+import PayrollPage from './features/payroll/pages/PayrollPage'
 import LoginPage from './features/auth/pages/LoginPage'
 import { ProtectedRoute } from './components/ProtectedRoute'
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/organization" element={<ProtectedRoute><AppShell><OrganizationPage /></AppShell></ProtectedRoute>} />
       <Route path="/attendance" element={<ProtectedRoute><AppShell><AttendancePage /></AppShell></ProtectedRoute>} />
       <Route path="/leave" element={<ProtectedRoute><AppShell><LeavePage /></AppShell></ProtectedRoute>} />
+      <Route path="/payroll" element={<ProtectedRoute><AppShell><PayrollPage /></AppShell></ProtectedRoute>} />
     </Routes>
   )
 }
