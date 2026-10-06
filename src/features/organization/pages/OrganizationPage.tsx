@@ -1,0 +1,31 @@
+export default function OrganizationPage() {
+  return (
+    <div className="rounded-[28px] border border-slate-200 bg-[#f7f5f0] p-8 shadow-soft">
+      <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Organization</p>
+      <h1 className="mt-2 text-4xl font-semibold tracking-tight">Your organization</h1>
+
+      <div className="mt-8 grid gap-6 lg:grid-cols-2">
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h2 className="text-xl font-semibold">Departments</h2>
+          <ul className="mt-4 space-y-3 text-slate-600">
+            <li>• Management Team</li>
+            <li>• HR & People & Culture</li>
+            <li>• Technology & Research</li>
+            <li>• Communication & Partnership</li>
+            <li>• Programmes & Resource Mobilisation</li>
+          </ul>
+        </div>
+
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h2 className="text-xl font-semibold">Org chart</h2>
+          <div className="mt-5 space-y-4">
+            <div className="rounded-2xl bg-violet-50 p-3">CEO • Mohammed Bayero Yayandi</div>
+            <div className="rounded-2xl bg-violet-50 p-3">COO • Mohammed Abubakar Yayanko</div>
+            <div className="rounded-2xl bg-violet-50 p-3">CTO • Alamin Musa Magaga</div>
+            <div className="rounded-2xl bg-violet-50 p-3">CCPO • Aliyu Alhassan Kutigi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
