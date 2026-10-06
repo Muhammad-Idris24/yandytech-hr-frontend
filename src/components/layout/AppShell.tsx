@@ -1,10 +1,11 @@
-import { Search, Bell, Settings, Users, Building2, Home, Clock, ArrowUpRight } from 'lucide-react'
+import { Search, Bell, Settings, Users, Building2, Home, Clock, CalendarRange, ArrowUpRight } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 import { cn } from '../../lib/utils'
 
 const navItems = [
   { to: '/', label: 'Home', icon: Home },
   { to: '/attendance', label: 'Attendance', icon: Clock },
+  { to: '/leave', label: 'Leave', icon: CalendarRange },
   { to: '/employees', label: 'Employees', icon: Users },
   { to: '/organization', label: 'Organization', icon: Building2 },
   { to: '/notifications', label: 'Notifications', icon: Bell },

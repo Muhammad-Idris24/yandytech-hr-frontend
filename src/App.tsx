@@ -6,6 +6,7 @@ import DashboardPage from './features/dashboard/pages/DashboardPage'
 import EmployeesPage from './features/employees/pages/EmployeesPage'
 import OrganizationPage from './features/organization/pages/OrganizationPage'
 import AttendancePage from './features/attendance/pages/AttendancePage'
+import LeavePage from './features/leave/pages/LeavePage'
 import LoginPage from './features/auth/pages/LoginPage'
 import { ProtectedRoute } from './components/ProtectedRoute'
 
@@ -20,49 +21,11 @@ function App() {
     <Routes>
       <Route path="/login" element={isAuthenticated ? <Navigate to="/" replace /> : <LoginPage />} />
 
-      <Route
-        path="/"
-        element={
-          <ProtectedRoute>
-            <AppShell>
-              <DashboardPage />
-            </AppShell>
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/employees"
-        element={
-          <ProtectedRoute>
-            <AppShell>
-              <EmployeesPage />
-            </AppShell>
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/organization"
-        element={
-          <ProtectedRoute>
-            <AppShell>
-              <OrganizationPage />
-            </AppShell>
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/attendance"
-        element={
-          <ProtectedRoute>
-            <AppShell>
-              <AttendancePage />
-            </AppShell>
-          </ProtectedRoute>
-        }
-      />
+      <Route path="/" element={<ProtectedRoute><AppShell><DashboardPage /></AppShell></ProtectedRoute>} />
+      <Route path="/employees" element={<ProtectedRoute><AppShell><EmployeesPage /></AppShell></ProtectedRoute>} />
+      <Route path="/organization" element={<ProtectedRoute><AppShell><OrganizationPage /></AppShell></ProtectedRoute>} />
+      <Route path="/attendance" element={<ProtectedRoute><AppShell><AttendancePage /></AppShell></ProtectedRoute>} />
+      <Route path="/leave" element={<ProtectedRoute><AppShell><LeavePage /></AppShell></ProtectedRoute>} />
     </Routes>
   )
 }
